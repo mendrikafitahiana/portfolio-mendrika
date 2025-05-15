@@ -8,6 +8,35 @@ import 'swiper/css';
 import 'basiclightbox/dist/basicLightbox.min.css';
 const anime = window.anime;
 const useTemplate = () => {
+
+  const viewAnimate = () => {
+    const blocks = document.querySelectorAll("[data-animate-block]");
+
+    blocks.forEach(function(current) {
+      const viewportHeight = window.innerHeight;
+      const triggerTop = (current.offsetTop + (viewportHeight * .2)) - viewportHeight;
+      const blockHeight = current.offsetHeight;
+      const blockSpace = triggerTop + blockHeight;
+      const scrollY = window.pageYOffset;
+      const inView = scrollY > triggerTop && scrollY <= blockSpace;
+      const isAnimated = current.classList.contains("ss-animated");
+
+      if (inView && (!isAnimated)) {
+        anime({
+          targets: current.querySelectorAll("[data-animate-el]"),
+          opacity: [0, 1],
+          translateY: [100, 0],
+          delay: anime.stagger(400, {start: 200}),
+          duration: 800,
+          easing: 'easeInOutCubic',
+          begin: function(anim) {
+            current.classList.add("ss-animated");
+          }
+        });
+      }
+    });
+  }
+
   useEffect(() => {
     // IIFE provenant du main.js original, adapté pour React
     (function(html) {
@@ -319,23 +348,26 @@ const useTemplate = () => {
         ssMobileMenu();
         ssScrollSpy();
         ssViewAnimate();
+        viewAnimate();
         ssSwiper();
         ssLightbox();
         ssAlertBoxes();
         ssMoveTo();
       })();
-
+      window.addEventListener('scroll', viewAnimate);
     })(document.documentElement);
+    
 
     // Nettoyage lors du démontage du composant
     return () => {
       // Supprimer les écouteurs d'événements si nécessaire
       window.removeEventListener('scroll', null);
       window.removeEventListener('resize', null);
+      window.removeEventListener('scroll', viewAnimate);
     };
   }, []);  // Le tableau vide assure que cela ne s'exécute qu'une fois au montage
 
-  return null;
+  return viewAnimate;
 };
 
 export default useTemplate;
