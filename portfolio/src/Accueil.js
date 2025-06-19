@@ -1,3 +1,5 @@
+import AboutPhoto from "./images/about-photo.jpg";
+
 export default function Accueil() {
   return (
     <main class="s-content">
@@ -34,7 +36,7 @@ export default function Accueil() {
         <div class="row about-info wide" data-animate-block>
 
           <div class="column lg-6 md-12 about-info__pic-block">
-              <img src="../src/images/about-photo.jpg" srcset="images/about-photo.jpg 1x, images/about-photo@2x.jpg 2x" alt="" class="about-info__pic"></img>
+              <img src={AboutPhoto} srcset={`${AboutPhoto} 1x, ${AboutPhoto} 2x`} alt="" class="about-info__pic"></img>
           </div>
 
           <div class="column lg-6 md-12">
