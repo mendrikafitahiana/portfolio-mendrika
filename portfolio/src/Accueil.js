@@ -36,7 +36,19 @@ export default function Accueil() {
         <div class="row about-info wide" data-animate-block>
 
           <div class="column lg-6 md-12 about-info__pic-block">
-              <img src={AboutPhoto} srcset={`${AboutPhoto} 1x, ${AboutPhoto} 2x`} alt="" class="about-info__pic"></img>
+            <img 
+                src={AboutPhoto} 
+                srcSet={`${AboutPhoto} 1x, ${AboutPhoto} 2x`} 
+                alt="" 
+                class="about-info__pic"
+                style={{
+                    width: '100%',
+                    height: 'auto',
+                    maxHeight: '800px', // ou la hauteur maximum souhaitée
+                    objectFit: 'contain',
+                    objectPosition: 'center'
+                }}
+            />
           </div>
 
           <div class="column lg-6 md-12">
