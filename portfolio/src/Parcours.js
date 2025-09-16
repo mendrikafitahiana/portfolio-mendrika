@@ -30,6 +30,18 @@ export default function Parcours() {
         </h2>
 
         <div class="timeline" data-animate-el>
+
+          <div class="timeline__block">
+            <div class="timeline__bullet"></div>
+            <div class="timeline__header">
+              <h4 class="timeline__title">Développeur Backend Nodejs/Express</h4>
+              <h5 class="timeline__meta">Celvius OS (Freelance)</h5>
+              <p class="timeline__timeframe">Mai 2025 - Présent</p>
+            </div>
+            <div class="timeline__desc">
+              <p>Application mobile d'optimisation de tournées pour les infirmiers à domicile.</p>
+            </div>
+          </div>
             
           <div class="timeline__block">
             <div class="timeline__bullet"></div>

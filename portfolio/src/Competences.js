@@ -121,7 +121,7 @@ export default function Competences() {
   
   return (
     <>
-      <section class="s-intro target-section" id="projets">
+      <section class="s-intro target-section" id="competences">
 
         <div class="row intro-content wide">
 
