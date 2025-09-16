@@ -109,7 +109,7 @@ export default function Contact() {
                   </div>
                   <div className="contact-text">
                     <h3>Disponibilité</h3>
-                    <p>Ouvert à toutes opportunités : Freelance, CDI, CDD, collaboration</p>
+                    <p>Ouverte à toutes opportunités : Freelance, CDI, CDD, collaboration</p>
                   </div>
                 </div>
               </div>

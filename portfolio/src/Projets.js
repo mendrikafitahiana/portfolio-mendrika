@@ -66,7 +66,7 @@ export default function Projets() {
 
       <div class="column lg-12" data-animate-block>
 
-        <ul class="folio-list row block-lg-one-half block-stack-on-1000">
+        <ul class="folio-list row block-lg-one-half block-stack-on-1000" style={{cursor: "pointer"}}>
 
           <li class="folio-list__item column" data-animate-el>
             <div class="folio-list__item-link" onClick={(e) => openModal('modal-01', e)}>

@@ -12,7 +12,7 @@ export default function Header({ setCurrentSection, currentSection }) {
 
       <div class="row wide main-nav-wrap">
         <nav class="column lg-12 main-nav">
-          <ul>
+          <ul style={{cursor: "pointer"}}>
           <li class={`${currentSection === "home" ? "current" : ""}`} onClick={() => setCurrentSection("home")}><a class="smoothscroll">Accueil</a></li>
           <li class={`${currentSection === "services" ? "current" : ""}`} onClick={() => setCurrentSection("services")}><a class="smoothscroll">Compétences</a></li>
           <li class={`${currentSection === "projets" ? "current" : ""}`} onClick={() => setCurrentSection("projets")}><a class="smoothscroll">Projets</a></li>

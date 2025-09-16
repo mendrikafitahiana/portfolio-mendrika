@@ -64,7 +64,8 @@ export default function Competences() {
       'rgba(255, 159, 243, 0.9)', 
       'rgba(84, 160, 255, 0.9)', 
       'rgba(255, 195, 113, 0.9)', 
-      'rgba(129, 236, 236, 0.9)'
+      'rgba(129, 236, 236, 0.9)',
+      'rgba(241, 235, 239, 0.84)'
     ];
     
     return {
@@ -204,6 +205,10 @@ export default function Competences() {
           @keyframes float5 {
             0%, 100% { transform: translate(-50%, -50%) translateY(0px); }
             50% { transform: translate(-50%, -50%) translateY(-6px); }
+          }
+            @keyframes float6 {
+            0%, 100% { transform: translate(-50%, -50%) translateY(0px); }
+            50% { transform: translate(-50%, -50%) translateY(-15px); }
           }
         `}
       </style>
