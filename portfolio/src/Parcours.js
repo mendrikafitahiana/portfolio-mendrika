@@ -12,9 +12,9 @@ export default function Parcours() {
         </div>
 
         <ul class="intro-social">
-          <li><a href="#0">Email</a></li>
-          <li><a href="#0">Github</a></li>
-          <li><a href="#0">Linkedin</a></li>
+          <li><a href="mailto:ramilisonfita24@gmail.com">Email</a></li>
+          <li><a href="https://github.com/mendrikafitahiana" target="_blank" rel="noopener noreferrer">Github</a></li>
+          <li><a href="https://www.linkedin.com/in/ramilison-mendrika-fitahiana/" target="_blank" rel="noopener noreferrer">Linkedin</a></li>
         </ul>
 
       </div>

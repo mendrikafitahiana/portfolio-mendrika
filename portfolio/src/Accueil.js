@@ -18,9 +18,9 @@ export default function Accueil() {
           </div>
 
           <ul class="intro-social">
-            <li><a href="#0">Email</a></li>
-            <li><a href="#0">Github</a></li>
-            <li><a href="#0">Linkedin</a></li>
+            <li><a href="mailto:ramilisonfita24@gmail.com">Email</a></li>
+            <li><a href="https://github.com/mendrikafitahiana" target="_blank" rel="noopener noreferrer">Github</a></li>
+            <li><a href="https://www.linkedin.com/in/ramilison-mendrika-fitahiana/" target="_blank" rel="noopener noreferrer">Linkedin</a></li>
           </ul>
 
         </div>
@@ -44,7 +44,7 @@ export default function Accueil() {
                 style={{
                     width: '100%',
                     height: 'auto',
-                    maxHeight: '800px', // ou la hauteur maximum souhaitée
+                    maxHeight: '980px', // ou la hauteur maximum souhaitée
                     objectFit: 'contain',
                     objectPosition: 'center'
                 }}
