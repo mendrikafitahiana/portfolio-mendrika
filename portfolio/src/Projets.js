@@ -6,6 +6,7 @@ import NurseApp from "./images/nurseapp.png";
 import Moov from "./images/moov.png";
 import MoovVideo from "./vidéos/moov.mp4";
 import NurseVideo from "./vidéos/nurse.mp4";
+import MyOverview from "./images/myoverview.png";
 
 export default function Projets() {
 
@@ -192,6 +193,27 @@ export default function Projets() {
           <ul className="folio-list row block-lg-one-half block-stack-on-1000" style={{cursor: "pointer"}}>
 
             <li className="folio-list__item column" data-animate-el>
+              <div className="folio-list__item-link" onClick={(e) => openModal('modal-05', e)}>
+                <div className="folio-list__item-pic">
+                  <img 
+                    src={MyOverview} 
+                    srcSet={`${MyOverview} 1x, ${MyOverview} 2x`}  
+                    alt=""
+                    style={{
+                      objectFit: 'contain',
+                      objectPosition: 'center'
+                    }}
+                  />
+                </div>
+                
+                <div className="folio-list__item-text">
+                  <div className="folio-list__item-cat">application web</div>
+                  <div className="folio-list__item-title">MyOverview</div>
+                </div>
+              </div>
+            </li>
+
+            <li className="folio-list__item column" data-animate-el>
               <div className="folio-list__item-link" onClick={(e) => openModal('modal-01', e)}>
                 <div className="folio-list__item-pic">
                   <img 
@@ -338,6 +360,21 @@ export default function Projets() {
           ],
           ['Symfony', 'React', 'MySQL', 'GitLab'],
           { onClick: () => setShowVideoConge(true) }
+        )}
+
+        {renderModal(
+          'modal-05',
+          MyOverview,
+          'MyOverview',
+          'Plateforme SaaS de gestion de la relation client et de collaboration interne. Et une version MyOverview Travel, destinée aux agences de voyages.',
+          [
+            'Projet en équipe (avec un chef de projet, un Lead développeur, et 4 développeur FullStack).',
+            'Développement des API REST du module Hôtel (recherche, disponibilités, devis, réservations et annulations).',
+            'Intégration des API Amadeus et Djoca.',
+            'Gestion des profils voyageurs et des critères hôteliers.'
+          ],
+          ['Symfony', 'MySQL', 'Docker', 'Git', 'Gitea', 'WSL'],
+          { url: 'https://www.my-overview.com', target: '_blank' }
         )}
 
         {showVideoConge && (
